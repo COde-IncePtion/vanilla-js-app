@@ -1,0 +1,9 @@
+.heading {
+  color: blue;
+  font-size: 10px;
+}
+
+.heading-rem {
+  color: red;
+  font-size: calc(10rem / 16);
+}
