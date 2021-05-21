@@ -1,9 +1,81 @@
-.heading {
-  color: blue;
-  font-size: 10px;
+:root {
+  --light-orange: #f58634;
+  --orange: #fb743e;
+  --dark-blue: #383e56;
+  --green1: #c5d7bd;
+  --green2: #9fb8ad;
+  --fontBaseSize: 16;
 }
 
-.heading-rem {
-  color: red;
-  font-size: calc(10rem / 16);
+html {
+  font-size: 16px;
+}
+
+body {
+  width: 100%;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#app {
+  width: 80%;
+}
+
+.primary-btn {
+  padding: 12px 10px;
+  border-radius: 10px;
+  background: var(--green2);
+}
+
+.secondary-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: var(--green2);
+}
+
+.tertiary-btn {
+  padding: 2px 5px;
+  border-radius: 5px;
+  background: var(--green2);
+}
+
+.size1 {
+  font-size: calc(10rem / var(--fontBaseSize));
+}
+
+.size2 {
+  font-size: calc(12rem / var(--fontBaseSize));
+}
+
+.size3 {
+  font-size: calc(14rem / var(--fontBaseSize));
+}
+
+.size4 {
+  font-size: calc(16rem / var(--fontBaseSize));
+}
+
+.card-display-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-wrapper {
+  width: 300px;
+  border: 1px solid var(--light-orange);
+  height: 300px;
+  margin: 10px 10px;
 }
