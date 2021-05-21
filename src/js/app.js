@@ -1,11 +1,15 @@
 import "../styles/index.css";
 import { getAnimals } from "../API";
-import { renderCards } from "../viewContoller";
+import {
+  getNextView,
+  renderCards,
+  renderDashBoardView,
+} from "../viewContoller";
 
 console.log("JS goes here");
 
-renderCards();
+document.getElementById("next-button").addEventListener("click", getNextView);
 
 getAnimals()
-  .then((res) => console.log("data = ", res.data))
-  .catch((err) => console.log("err occured", err));
+  .then((res) => renderDashBoardView(res.data.animals))
+  .catch((err) => console.log("error occurred", err));
