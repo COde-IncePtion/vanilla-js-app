@@ -27,6 +27,14 @@ export const getDisplayCard = (data) => {
   const desciption = getDomNode("p", ["size4"]);
   desciption.innerText = data.description;
 
-  addChildrenToDom(cardWrapper, [profilePictureDisplaySection, desciption]);
+  const anchorLink = getDomNode("a", []);
+  anchorLink.href = "/profile.html?petId=1234";
+  anchorLink.target = "_blank";
+  anchorLink.innerText = "profile-view";
+  addChildrenToDom(cardWrapper, [
+    profilePictureDisplaySection,
+    desciption,
+    anchorLink,
+  ]);
   return cardWrapper;
 };
